@@ -9,6 +9,7 @@ html, body {
     align-items: center;   /* Aligns vertically */
     justify-content: center; /* Aligns horizontally */
     background-color: #f4f4f4;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for dark mode toggle */
     overflow-x: hidden;
 }
 
