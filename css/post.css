@@ -1,0 +1,45 @@
+body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.center-wrapper {
+    text-align: center;
+    max-width: 600px; /* You can adjust the width as needed */
+    padding: 20px;
+}
+
+a {
+    display: block;
+    margin-bottom: 20px;
+    color: #0f0f0f;
+}
+
+/* Dark Mode Styles */
+.dark-mode body {
+    background-color: black;
+    color: white;
+}
+
+.dark-mode body a {
+    color: #ffffff;
+}
+
+.blog-post h1 {
+    color: #272727;
+}
+
+.dark-mode body .blog-post h1 {
+    color: #e0e0e0;
+}
+
+.blog-post p {
+    color: #9b9b9b;
+}
+
+.dark-mode body .blog-post p {
+    color: #bbbbbb;
+}

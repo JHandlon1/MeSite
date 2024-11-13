@@ -1,23 +1,30 @@
-// Check for dark mode preference on page load
-window.onload = function() {
-    if (localStorage.getItem("darkMode") === "enabled") {
-      document.body.classList.add("dark-mode");
-      document.querySelector(".dark-mode-toggle").classList.add("dark-mode");
+document.addEventListener("DOMContentLoaded", function () {
+    const savedTheme = localStorage.getItem("MyTheme");
+    console.log("Applying saved theme:", savedTheme); // Debugging log
+
+    if (savedTheme) {
+        document.body.classList.add(savedTheme);
     }
-  };
-  
-  // Toggle dark mode and save preference in localStorage
-  function darkMode() {
-      var bod = document.body;
-      bod.classList.toggle("dark-mode");
-  
-      var darkModeToggleButton = document.querySelector(".dark-mode-toggle");
-      darkModeToggleButton.classList.toggle("dark-mode");
-  
-      // Save the dark mode state to localStorage
-      if (bod.classList.contains("dark-mode")) {
-          localStorage.setItem("darkMode", "enabled");
-      } else {
-          localStorage.removeItem("darkMode");
-      }
-  }
+});
+
+// Toggle theme and save preference
+function toggleTheme(theme) {
+    const body = document.body;
+    const currentTheme = localStorage.getItem("MyTheme");
+
+    // Clear any existing theme class from the body
+    if (currentTheme) {
+        body.classList.remove(currentTheme);
+    }
+
+    // Apply the new theme class and save it to localStorage
+    if (theme !== currentTheme) {
+        body.classList.add(theme);
+        localStorage.setItem("MyTheme", theme);
+        console.log("Theme set and saved to:", theme); // Debugging log
+    } else {
+        // If theme is toggled off, remove it from localStorage
+        localStorage.removeItem("MyTheme");
+        console.log("Theme removed from localStorage"); // Debugging log
+    }
+}
