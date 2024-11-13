@@ -1,18 +1,14 @@
 /* Global Styles */
 html, body {
     height: 100%;
-    width: 100%; /* Ensure the width covers the full page */
+    width: 100%;
     margin: 0;
-    padding: 0; /* Remove any default padding */
+    padding: 0;
     font-family: 'Poppins', sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #f4f4f4; /* Light gray background for the page */
-    color: #333; /* Default text color */
-    line-height: 1.6;
-    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for dark mode toggle */
-    overflow-x: hidden; /* Prevent horizontal scrolling if there's any extra width */
+    display: flex;         /* Centers all content vertically and horizontally */
+    align-items: center;   /* Aligns vertically */
+    justify-content: center; /* Aligns horizontally */
+    background-color: #f4f4f4;
 }
 
 /* Position the back-to-blog link in the top-left corner */
@@ -30,18 +26,6 @@ a.back-to-blog {
 
 a.back-to-blog:hover {
     color: #0056b3;
-}
-
-/* Center the content wrapper */
-.center-wrapper {
-    text-align: center;
-    max-width: 800px;
-    width: 100%; /* Make sure it stretches fully */
-    padding: 30px;
-    background-color: #fff;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    margin: 20px;
 }
 
 /* Link Styling */
@@ -102,15 +86,12 @@ a:hover {
 
 /* General Body and Content Layout */
 .blog-post {
-    margin-top: 20px;
+    width: 600px;         /* Set the blog post width to 200px */
     padding: 20px;
-    width: auto;       /* Prevent stretching, use auto width */
-    max-width: 200px;  /* Ensure it doesn't stretch beyond 800px */
-    margin-left: auto; /* Center it horizontally */
-    margin-right: auto; /* Center it horizontally */
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;         /* Space around the blog post */
 }
 
 .dark-mode .blog-post {
