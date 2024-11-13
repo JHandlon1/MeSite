@@ -36,7 +36,7 @@ a.back-to-blog:hover {
 .center-wrapper {
     text-align: center;
     max-width: 800px;
-    width: 100%; /* Make sure it stretches fully */
+    width: auto;
     padding: 30px;
     background-color: #fff;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
