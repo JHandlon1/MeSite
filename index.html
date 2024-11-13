@@ -11,6 +11,9 @@
       <!--stylesheet---------------------->
       <link rel="stylesheet" href="css/style.css"/>
 
+      <!--dark-mode--------->
+      <script src="scripts/darkmode.js"></script>
+
       <!--fav icon------------------------>
       <link rel="shortcut icon" href="images/existential_dread.svg"/>
 
@@ -33,7 +36,14 @@
         <h3>The One Spot for James</h3>
       </div>
 
-      <button class="dark-mode-toggle" onclick="toggleTheme('dark-mode')">Dark Mode</button>
+      <button class="dark-mode-toggle" onclick="toggleDarkMode()">Dark Mode</button>
+
+      <script>
+        // Apply dark mode if the theme is already set in the cookie
+        document.addEventListener("DOMContentLoaded", function () {
+            applyDarkMode();  // Check and apply dark mode if stored in cookies
+        });
+      </script>
 
       <!--blog-container-------------->
       <div class="blog-container">
@@ -48,9 +58,9 @@
           <!--text--->
           <div class="blog-text">
             <span>12 November 2024</span>
-            <a href="lunch.html" class="blog-title">What'd I eat for Lunch Today?</a>
+            <a href="posts/lunch.html" class="blog-title">What'd I eat for Lunch Today?</a>
             <p>Well, today for lunch I was eating at Dukes' Dining with none other than Dan and Trevor. I had a Chipotle Bacon Cheeseburger from The Den. It was mmm-mmm good. Then I had to walk uphill for 15 mins :/</p>
-            <a href="lunch.html">Read More</a>
+            <a href="posts/lunch.html">Read More</a>
           </div>
 
         </div>
@@ -65,9 +75,9 @@
           <!--text--->
           <div class="blog-text">
             <span>12 November 2024</span>
-            <a href="chris.html" class="blog-title">Why Chris Johnson is the Best Professor</a>
+            <a href="posts/chris.html" class="blog-title">Why Chris Johnson is the Best Professor</a>
             <p>I could go into the many things about Chris Johnson, but he's truly a great guy.</p>
-            <a href="chris.html">Read More</a>
+            <a href="posts/chris.html">Read More</a>
           </div>
 
         </div>
@@ -82,9 +92,9 @@
           <!--text--->
           <div class="blog-text">
             <span>12 November 2024</span>
-            <a href="malamut.html" class="blog-title">The Anthology of an Alaskan Malamut</a>
+            <a href="posts/malamut.html" class="blog-title">The Anthology of an Alaskan Malamut</a>
             <p>This one is self-explanatory.</p>
-            <a href="malamut.html">Read More</a>
+            <a href="posts/malamut.html">Read More</a>
           </div>
 
         </div>
@@ -97,7 +107,6 @@
 
     </section>
 
-    <script src="scripts/funcs.js"></script>
   </body>
 
 

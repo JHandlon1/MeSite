@@ -4,13 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>What'd I eat for Lunch Today?</title>
-    <link rel="stylesheet" href="css/post.css">
-    <script src="scripts/funcs.js" defer></script>
+    <link rel="stylesheet" href="../css/post.css">
+    <script src="../scripts/darkmode.js" defer></script>
 </head>
 <body>
 
     <!-- Back Button -->
-    <a href="index.html">← Back to Blog</a>
+    <a href="../index.html" class="back-to-blog">← Back to Blog</a>
 
     <!-- Blog Post Content -->
     <section class="blog-post">
@@ -19,6 +19,16 @@
         <p>Today, for lunch, I was at Duke’s Dining with Dan and Trevor. I had a Chipotle Bacon Cheeseburger from The Den. It was delicious, but then I had to walk uphill for 15 minutes to get back!</p>
         <!-- More content here... -->
     </section>
+
+    <script>
+        // Apply dark mode if the theme is already set in the cookie
+        document.addEventListener("DOMContentLoaded", function () {
+            applyDarkMode();  // Check and apply dark mode if stored in cookies
+        });
+    </script>
+    
+    </body>
+    </html>
 
 </body>
 </html>

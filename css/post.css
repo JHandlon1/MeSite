@@ -1,45 +1,114 @@
-body {
+/* Global Styles */
+html, body {
     height: 100%;
+    width: 100%; /* Ensure the width covers the full page */
     margin: 0;
+    padding: 0; /* Remove any default padding */
+    font-family: 'Poppins', sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #f4f4f4; /* Light gray background for the page */
+    color: #333; /* Default text color */
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for dark mode toggle */
+    overflow-x: hidden; /* Prevent horizontal scrolling if there's any extra width */
 }
 
+/* Position the back-to-blog link in the top-left corner */
+a.back-to-blog {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 1rem;
+    color: #007bff;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    z-index: 10; /* Ensure it stays on top of other content */
+}
+
+a.back-to-blog:hover {
+    color: #0056b3;
+}
+
+/* Center the content wrapper */
 .center-wrapper {
     text-align: center;
-    max-width: 600px; /* You can adjust the width as needed */
-    padding: 20px;
+    max-width: 800px;
+    width: 100%; /* Make sure it stretches fully */
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin: 20px;
 }
 
+/* Link Styling */
 a {
-    display: block;
+    display: inline-block;
     margin-bottom: 20px;
-    color: #0f0f0f;
+    color: #007bff;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0056b3;
 }
 
 /* Dark Mode Styles */
-.dark-mode body {
-    background-color: black;
-    color: white;
-}
-
-.dark-mode body a {
-    color: #ffffff;
-}
-
-.blog-post h1 {
-    color: #272727;
-}
-
-.dark-mode body .blog-post h1 {
+.dark-mode {
+    background-color: #121212;
     color: #e0e0e0;
 }
 
-.blog-post p {
-    color: #9b9b9b;
+.dark-mode .center-wrapper {
+    background-color: #1e1e1e;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
 }
 
-.dark-mode body .blog-post p {
-    color: #bbbbbb;
+/* Dark Mode Links */
+.dark-mode a {
+    color: #80d4ff;
+}
+
+/* Dark Mode Heading */
+.blog-post h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #272727;
+    margin-bottom: 15px;
+}
+
+.dark-mode .blog-post h1 {
+    color: #e0e0e0;
+}
+
+/* Paragraph Styling */
+.blog-post p {
+    font-size: 1.1rem;
+    color: #5a5a5a;
+    margin-bottom: 15px;
+    text-align: justify;
+    line-height: 1.8;
+}
+
+/* Dark Mode Paragraph */
+.dark-mode .blog-post p {
+    color: #bbb;
+}
+
+/* General Body and Content Layout */
+.blog-post {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode .blog-post {
+    background-color: #2c2c2c;
 }
