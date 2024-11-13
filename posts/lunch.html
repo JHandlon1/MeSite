@@ -20,9 +20,7 @@
 
         <!-- Display the content of lunch.txt here -->
         <pre id="text-content"></pre> <!-- Placeholder for the file content -->
-    </section>
-
-    <script>
+        <script>
         // Function to fetch and display the content of the text file
         document.addEventListener("DOMContentLoaded", function() {
             fetch("../texts/lunch.txt")
@@ -32,8 +30,10 @@
                     document.getElementById("text-content").textContent = data;
                 })
                 .catch(error => console.error("Error loading text file:", error));
-        });
+        }); </script>
+    </section>
 
+    <script>
         // Apply dark mode if the theme is already set in the cookie
         document.addEventListener("DOMContentLoaded", function () {
             applyDarkMode();  // Check and apply dark mode if stored in cookies
