@@ -103,7 +103,7 @@ a:hover {
 
 /* Ensure text content stays within the blog-post container */
 #text-content {
-    font-size: 1.2rem;
+    font-size: 1.2rem !important;
     white-space: pre-wrap;   /* Wraps text instead of overflowing */
     word-wrap: break-word;   /* Breaks long words to prevent overflow */
     overflow-y: auto;        /* Vertical scrolling if content exceeds the max height */
