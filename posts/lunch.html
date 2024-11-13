@@ -16,11 +16,24 @@
     <section class="blog-post">
         <h1>What'd I Eat for Lunch Today?</h1>
         <p>Published on 12 November 2024</p>
-        <p>Today, for lunch, I was at Duke’s Dining with Dan and Trevor. I had a Chipotle Bacon Cheeseburger from The Den. It was delicious, but then I had to walk uphill for 15 minutes to get back!</p>
         <!-- More content here... -->
+
+        <!-- Display the content of lunch.txt here -->
+        <pre id="text-content"></pre> <!-- Placeholder for the file content -->
     </section>
 
     <script>
+        // Function to fetch and display the content of the text file
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch("../texts/lunch.txt")
+                .then(response => response.text())
+                .then(data => {
+                    // Insert the text file content into the pre tag
+                    document.getElementById("text-content").textContent = data;
+                })
+                .catch(error => console.error("Error loading text file:", error));
+        });
+
         // Apply dark mode if the theme is already set in the cookie
         document.addEventListener("DOMContentLoaded", function () {
             applyDarkMode();  // Check and apply dark mode if stored in cookies
