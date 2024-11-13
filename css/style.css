@@ -37,6 +37,10 @@ body{
     border-bottom: 1px solid regba(0,0,0,0.05);
 }
 
+.da-button{
+    justify-content: right;
+}
+
 .blog-heading{
     display: flex;
     justify-content: center;
