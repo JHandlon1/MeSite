@@ -104,7 +104,10 @@ a:hover {
 .blog-post {
     margin-top: 20px;
     padding: 20px;
-    width: 200px;
+    width: auto;       /* Prevent stretching, use auto width */
+    max-width: 200px;  /* Ensure it doesn't stretch beyond 800px */
+    margin-left: auto; /* Center it horizontally */
+    margin-right: auto; /* Center it horizontally */
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
