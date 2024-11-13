@@ -102,7 +102,7 @@ a:hover {
 }
 
 /* Ensure text content stays within the blog-post container */
-#text-content {
+.blog-post #text-content {
     font-size: 1.2rem !important;
     white-space: pre-wrap;   /* Wraps text instead of overflowing */
     word-wrap: break-word;   /* Breaks long words to prevent overflow */
@@ -115,7 +115,7 @@ a:hover {
 }
 
 /* Dark Mode - apply styles for the text content */
-.dark-mode #text-content {
+.dark-mode .blog-post #text-content {
     background-color: #333;
     color: #e0e0e0;
 }
