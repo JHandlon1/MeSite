@@ -3,33 +3,29 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>My Very First (Real) Blog Post!</title>
+    <title>I Didn't Get Much Sleep Last Night</title>
     <link rel="stylesheet" href="../css/post.css">
     <script src="../scripts/darkmode.js" defer></script>
 </head>
 <body>
-
-    <!-- Dark Mode Toggle------------
-    <button class="theme-toggle" onclick="toggleTheme('dark-mode')">Toggle Dark Mode</button> -->
 
     <!-- Back Button -->
     <a href="../index.html" class="back-to-blog">← Back to Blog</a>
 
     <!-- Blog Post Content -->
     <section class="blog-post">
-        <h1>My Very First (Real) Blog Post!</h1>
-        <p>Published on 13 November 2024</p>
+        <h1>I Didn't Get Much Sleep Last Night</h1>
+        <p>Published on 15 November 2024</p>
+        <!-- More content here... -->
 
-        <!-- Display the content of chris.txt here -->
+        <!-- Display the content of malamut.txt here -->
         <pre id="text-content"></pre> <!-- Placeholder for the file content -->
-
-        <!-- You can add more content below... -->
     </section>
 
     <script>
         // Function to fetch and display the content of the text file
         document.addEventListener("DOMContentLoaded", function() {
-            fetch("../texts/first.txt")
+            fetch("../texts/sleep.txt")
                 .then(response => response.text())
                 .then(data => {
                     // Insert the text file content into the pre tag
@@ -43,6 +39,9 @@
             applyDarkMode();  // Check and apply dark mode if stored in cookies
         });
     </script>
+    
+    </body>
+    </html>
 
 </body>
 </html>
