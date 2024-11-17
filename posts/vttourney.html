@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>I Went to a Virginia Tech Pool Tournament</title>
+    <link rel="stylesheet" href="../css/post.css">
+    <script src="../scripts/darkmode.js" defer></script>
+</head>
+<body>
+
+    <!-- Dark Mode Toggle------------
+    <button class="theme-toggle" onclick="toggleTheme('dark-mode')">Toggle Dark Mode</button> -->
+
+    <!-- Back Button -->
+    <a href="../index.html" class="back-to-blog">← Back to Blog</a>
+
+    <!-- Blog Post Content -->
+    <section class="blog-post">
+        <h1>I Went to a Virginia Tech Pool Tournament</h1>
+        <p>Published on 16 November 2024</p>
+
+        <!-- Display the content of chris.txt here -->
+        <pre id="text-content"></pre> <!-- Placeholder for the file content -->
+
+        <!-- You can add more content below... -->
+    </section>
+
+    <script>
+        // Function to fetch and display the content of the text file
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch("../texts/vttourney.txt")
+                .then(response => response.text())
+                .then(data => {
+                    // Insert the text file content into the pre tag
+                    document.getElementById("text-content").textContent = data;
+                })
+                .catch(error => console.error("Error loading text file:", error));
+        });
+
+        // Apply dark mode if the theme is already set in the cookie
+        document.addEventListener("DOMContentLoaded", function () {
+            applyDarkMode();  // Check and apply dark mode if stored in cookies
+        });
+    </script>
+
+</body>
+</html>
