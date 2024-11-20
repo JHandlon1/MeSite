@@ -58,8 +58,9 @@ ul {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 40px;
+    padding: 20px 0; /* Reduced padding */
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    margin-top: -90px; /* Pull closer to the top (if needed) */
 }
 
 .blog-heading {
@@ -68,6 +69,7 @@ ul {
     align-items: center;
     flex-direction: column;
     text-align: center;
+    margin-bottom: 10px; /* Adjust the spacing below the header */
 }
 
 /* Blog heading span */
@@ -75,18 +77,20 @@ ul {
     color: #f33c3c;
     font-size: 1.3rem;
     font-weight: 400;
-    margin-bottom: 10px;
+    margin-bottom: 5px; /* Reduced spacing below the span */
 }
 
 .blog-heading h3 {
     font-size: 2.4rem;
     color: #2b2b2b;
     font-weight: 600;
+    margin-bottom: 5px; /* Adjust spacing below the heading */
 }
 
 .dark-mode .blog-heading h3 {
     color: white;
 }
+
 
 .blog-container {
     display: flex;
