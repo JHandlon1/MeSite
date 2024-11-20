@@ -181,3 +181,26 @@ ul {
     color: #f33c3c;
     transition: all ease 0.3s;
 }
+
+.sort-dropdown {
+    display: inline-block;
+    margin-left: 0px;
+  }
+  
+  .sort-dropdown select {
+    padding: 5px;       /* Reduce padding */
+    font-size: 12px;    /* Smaller font size */
+    width: auto;        /* Adjust width dynamically */
+    height: auto;       /* Ensure it scales properly */
+    border-radius: 5px; /* Rounded corners for consistent styling */
+    border: 1px solid #ccc; /* Optional: Light border */
+  }
+  
+  .sort-dropdown label {
+    font-size: 12px;    /* Match label font size with the dropdown */
+    margin-right: 5px;  /* Small space between label and dropdown */
+  }
+  
+  .filter-btn:hover {
+    color: #f33c3c;
+  }
